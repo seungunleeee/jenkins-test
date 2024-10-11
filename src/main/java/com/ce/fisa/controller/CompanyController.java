@@ -11,21 +11,22 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ce.fisa.exception.NotExistEmpException;
-/*import com.ce.fisa.model.domain.dto.DeptDTO;
-import com.ce.fisa.model.domain.dto.EmpDTO;*/
-/*import com.ce.fisa.service.CompanyService;*/
+import com.ce.fisa.model.domain.dto.DeptDTO;
+import com.ce.fisa.model.domain.dto.EmpDTO;
+import com.ce.fisa.service.CompanyService;
+
 
 @RestController //모든 메소드의 결과가 문자열로 반환, 비동기에 적합
 public class CompanyController {
 
-//	@Autowired
-//	private CompanyService service;
+	@Autowired
+	private CompanyService service;
 	
-//	//모든 부서 정보 검색
-//	@GetMapping("alldepts")
-//	public List<DeptDTO> getDeptAll(){
-//		return service.getDeptAll();
-//	}
+	//모든 부서 정보 검색
+	@GetMapping("alldepts")
+	public List<DeptDTO> getDeptAll(){
+		return service.getDeptAll();
+	}
 	
 	@GetMapping("test")
 	public String getTest(){
