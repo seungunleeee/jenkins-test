@@ -59,7 +59,7 @@ public class CompanyServiceImpl implements CompanyService{
 	public List<DeptDTO> getDeptAll() {
 	    log.info("*** 모든 부서 정보 요청 ***");
 	    List<Dept> deptEntities = deptDao.findAll();
-	    System.out.println(deptEntities);
+	    System.out.println("v2"+deptEntities);
 	     // 유틸리티 메서드로 리스트 매핑 처리
         return mapList(deptEntities, DeptDTO.class);
     }
