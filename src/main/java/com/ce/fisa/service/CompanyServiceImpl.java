@@ -57,7 +57,7 @@ public class CompanyServiceImpl implements CompanyService{
 
 	@Override
 	public List<DeptDTO> getDeptAll() {
-	    log.info("*** 모든 부서 정보 요청 V2 !!! ***");
+	    log.info("*** 모든 부서 정보 요청 V3 !!! ***");
 	    List<Dept> deptEntities = deptDao.findAll();
 	    System.out.println(deptEntities);
 	     // 유틸리티 메서드로 리스트 매핑 처리
